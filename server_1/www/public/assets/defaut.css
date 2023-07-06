@@ -1,0 +1,422 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none;}
+table {border-collapse: collapse;border-spacing: 0;}
+body, html{margin:0px;padding:0px;font:11px Tahoma, Verdana, Geneva;color:#999999; background-color:#F1F2F3;}
+form, div, td, p, h1, h2, h3, h4, h5, hr{margin:0;padding:0}
+img, table{border:0}
+ul{margin:0;padding:0;list-style:none;}
+label{padding:4px 0;color:#505050;font-size:11px;font-weight:bold;display:block}
+a{color:#336ea6;text-decoration:none}
+#menu_haut > li {margin:0; padding:0;}
+#menu_haut > a:hover{color:#FA5400}
+h1{font:bold 20px Arial, Helvetica, sans-serif;letter-spacing:-1px;color:#202020}
+h1 a{color:#202020}
+h1 a:hover{color:#202020;text-decoration:underline}
+h2{margin-bottom:10px;font:normal 18px Arial, Helvetica, sans-serif;letter-spacing:-0.5px;color:#202020}
+h3{padding-bottom:4px;font:normal 12px Tahoma, Verdana, Geneva;color:#000000}
+h4{padding-bottom:5px;font:normal 14px Tahoma, Verdana, Geneva;color:#000000}
+
+/** START STRUCTURE **/
+#wrap{margin:0 auto;width:90%;}
+	/** HEADER **/
+	#bg_top_header{height:15px;}
+	#header{border-top:1px solid #CECECC; background-color:#e3e3e0;padding:0px}
+	#head{position:relative;height:67px;font-size:11px;background-color:white;border:1px solid #cececc;border-top:0;border-bottom:0}
+	#head_logo{float:left;width:300px}
+	a.logo{margin:7px 0 0 15px; width:280px; height:57px;display:block;text-decoration:none;background:url(img/logo_4.png) no-repeat top left}
+	.head_menu{float:right}
+	.liste_lien{margin-right:26px}
+	.liste_lien li { float:left; margin:25px 15px 0 0;background:#ffffff no-repeat top left}
+	.liste_lien li.drop_page{margin-left:20px;font-size:12px;background:#eff0eb no-repeat 0 -57px}
+	.liste_lien a{color:#000;white-space:nowrap}
+	.liste_lien a:hover{text-decoration:underline}
+	.liste_lien li.bloc_panier{margin-top:25px;padding:3px 5px 3px 8px;background:#eff0eb no-repeat 118px 0}
+	.liste_lien li.bloc_panier a:hover{text-decoration:underline}
+
+	/** FOOTER **/	
+	#bg_top_footer{height:0;}
+	#bg_bottom{height:15px;}		
+	#footer{border: 1px solid #CECECC; background-color:#e3e3e0;margin:0px 0px 35px 0px;font:10px Tahoma, Verdana, Geneva;color:#999;line-height:12px}
+	#footer td{vertical-align:top}
+	#footer li{padding:1px 0}
+	#footer a{color:#aaaaaa}
+	#footer a:hover{color:#336ea6}
+	#footer input{font-size:11px}
+	#foot_table{margin-left:39px}
+	/** MAIN **/	
+	#main{padding:0px 26px;background-color:white;border:1px solid #cececc;border-top:0;border-bottom:0}
+	
+/** END STRUCTURE **/	
+.tinyUrl{background-color:#F7F8F4;border:0;width:200px;font-size:14px;color:#336ea6}
+/** START FICHE ARTICLE **/
+.zone_droite{float: right;text-align:right;margin-right:80px; }	
+.ligne_hr{color:#7b7b7b;padding:5px 0px 5px 0px;border-top:1px solid #a1a1a1;font-size:10px}
+.body-fiche-produit{width:100%;}
+.body-fiche-produit tr td { vertical-align:top;}
+#price{margin-top:0px;font-weight:bold;font-size:14px;color:#1e1e1e}
+#ajout_panier{margin-top:30px}
+/* - quantite - */
+.zone_qte{color: #373736;font-family:'Oswald',sans-serif;font-size:18px;font-style:normal;font-weight:400}
+.qty_buttons{width:100px; border:1px solid #0B4968;margin:0;}
+.minus{border:none;width:30px;height:32px;background-color:#0B4968;color:#ffffff;margin-right:0}
+.qty{border:none;text-align:center;color:#373736;margin:0;width:30px;height:30px;font-family:'Oswald',sans-serif;font-size: 14px;font-style:normal;}
+.plus{border:none;width:30px;height:32px;background-color:#0B4968;color:#ffffff;margin-left:0}
+
+
+#bag_stock{min-height:130px;height:auto !important;height:130px}
+.bag_td img{padding:0;border:2px solid #d81923}
+.bag_color{float:left;width:25px;margin-right:5px}
+.bag_color_img{padding:2px}
+.bag_color_img:hover{padding:0;border:2px solid #0675b5}
+.bar_out{width:120px;background-color:#bebebe}
+.bar_in{height:4px;background-color:#d81923}
+
+#bag_submit{text-align:right}
+#buy_bg{padding:20px;padding-top:10px;background-color:#f8f7f4}
+#shop_top_menu{margin:0 51px 15px 0;padding:2px 0 12px 0;border-bottom:1px dotted #EAE9E4}
+#shop_top_menu a{outline:none}
+#shop_h_one h1{margin:-14px 51px 15px 0;padding:5px 10px;font:normal 11px Tahoma, Verdana, Geneva;color:#b4b4b4;background-color:#F8F7F4;letter-spacing:0}
+#shop_head{margin:10px 0 5px 0;font-size:9px;color:#1E1E1E;background-color:#eeede6}
+/** END FICHE ARTICLE **/	
+
+/** START FORMULAIRE **/
+.formulaire{width:94%;max-width:975px;min-width:280px;margin:0 auto 0 auto}
+.formulaire h3{margin:0px;padding:10px}
+fieldset legend{
+	color:#000000;
+	margin-top : 15px;
+	margin-bottom:20px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-left: 5px solid #566593;
+	padding : 5px;
+}
+.ligne{padding:5px 10px 5px 10px}
+.ligne label {
+	display: block;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;	
+	-moz-box-orient: horizontal;
+	-moz-box-pack: end;
+	-moz-box-align: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: end;
+	-webkit-box-align: center;
+	box-orient: horizontal;
+	box-pack: end;
+	box-align: center;
+	height: 20px;
+	float: left;
+	padding-right: 1%;
+	width: 30%;
+	min-width: 80px;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: right;
+}
+fieldset.required{display:block}
+.ligne.required label{font-size:12px}
+.ligne label.no_label{float:none}
+.ligne input[type=text],
+.ligne input[type=password],
+.ligne input[type=email],
+.ligne input[type=tel],
+.ligne input[type=number],
+.ligne input[type=date] {	
+	border: 1px solid #ddd;
+	padding: 4px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+	color: #666;
+	width: 64%;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f7f7f7 7%, #f7f7f7 22%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#f7f7f7), color-stop(22%,#f7f7f7), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+	background: linear-gradient(top, #ffffff 0%,#f7f7f7 7%,#f7f7f7 22%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.7), 1px 1px 2px rgba(0,0,0,0.1) inset;
+}
+.ligne input:focus{background:#f9fcef;outline:none}
+.ligne input[type="submit"] {
+	border: 1px solid #505F90;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.4);
+	color: #ffffff;
+	display: inline-block;
+	border-radius: 4px;
+	margin-top: 10px;
+	margin-left: 33%;
+	padding: 6px 15px;
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	font-weight: bold;
+	background: #505F90;
+	background: -moz-linear-gradient(top, #505F90 0%, #8595AF 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#505F90), color-stop(100%,#8595AF));
+	background: -webkit-linear-gradient(top, #505F90 0%,#8595AF 100%);
+	background: -o-linear-gradient(top, #505F90 0%,#8595AF 100%);
+	background: -ms-linear-gradient(top, #505F90 0%,#8595AF 100%);
+	background: linear-gradient(top, #505F90 0%,#8595AF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505F90', endColorstr='#8595AF',GradientType=0 );
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+.ligne input[type="submit"]:active {box-shadow:0px 1px 2px rgba(255,255,255,0.5);background:#505F90}
+/** END FORMULAIRE **/
+
+/** START MENU HAUT **/
+#menu_haut, #menu_haut ul{padding:0;margin:0;list-style:none;text-align:left}
+#menu_haut{
+	position:relative;
+	height:40px;
+	border:1px solid #CECECC;
+	background-color:#E9E7EC;
+	background-image: url("img/bg.jpg");
+	color: #333333;
+	font-family: Arial,Courier New, Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform:capitalize;
+}
+#menu_haut ul { z-index:5000;
+	height:auto;
+	border:1px solid #CECECC;
+	background-color:#E9E7EC;
+	top: 40px;
+}
+#menu_haut li {
+	list-style:none;
+	display: inline-block;
+	margin: 0px 0px;
+	padding: 0 15px;
+	padding-top:10px;
+	height: 30px;
+	cursor:pointer;
+	vertical-align:middle;
+}
+#menu_haut ul li{color:#336ea6;}
+#menu_haut ul li:hover{color:#FA5400;}
+
+#menu_haut li.sep {
+	height: 40px;
+	padding: 0;
+	border-left:1px solid #C8C8CC;
+	border-right:1px solid #FFFFFF;
+}
+#menu_haut a {display:block;padding:0;text-decoration:none}
+#menu_haut li ul {position: absolute;width:144px;left:-999em;}
+#menu_haut li:hover ul ul, #menu_haut li.hover ul ul {left: -999em;}
+#menu_haut li:hover ul, #menu_haut li li:hover ul, #menu_haut li.hover ul 
+{
+        left: auto; /* Repositionnement normal */
+		margin-left:-20px;
+        min-height: 0; /* Corrige un bug sous IE */
+}
+#menu_bas {
+	background: url("img/footer_bg.png") repeat-x scroll left top #DDDDDD;
+	width: 100%;
+	height: 180px;
+	color: #CCCCCC;
+	font-size: 0.75em;
+}
+#footer{background-color:#444444;width:100%;height:80px}
+#page_content{margin-top:50px;min-height:500px}
+/** END MENU HAUT **/
+
+/** START FORM CONNECT **/
+.formulaire.connexion{width:50%;float:left;}
+/** END FORM CONNECT **/
+
+/** START GENERIQUE **/
+.float_left{float:left}
+.float_right{float:right}
+.clear{clear:both}
+h4{
+	display:inline;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color:#000000;
+	margin-bottom:20px;
+	border-left: 5px solid #566593;
+	padding : 5px;
+}
+.no_padding{padding:0}
+.no_margin{margin:0}
+.no_border{border:none}
+.taille_10pc{width:10%}
+.taille_20pc{width:20%}
+.taille_30pc{width:30%}
+.taille_40pc{width:40%}
+.taille_50pc{width:50%}
+.taille_60pc{width:60%}
+.taille_70pc{width:70%}
+.taille_80pc{width:80%}
+.taille_90pc{width:90%}
+.taille_100pc{width:100%}
+.erreur{display:block;color:red;text-align:center}
+/** END GENERIQUE **/
+
+#slider {
+	background-size: cover;
+	background-image: url('img/slider.jpg');
+	width:100%;
+	height:280px;
+}
+
+#slider_contact {
+	background-size: cover;
+	background-image: url('img/slider_contact.jpg');
+	width:100%;
+	height:280px;
+}
+
+li.search { margin :0px;padding-top:0px!important; }
+#header_search { height:30px;margin:0px; }
+#btn_search { height:30px;margin-left:-5px;margin-top:-5px; }
+
+#main { border-top: 1px solid #cececc; min-height :300px; }
+
+h1 { margin:10px; }
+label[for="form_contact"] { display: inline-block; font-size: 14px;}
+#form_contact { vertical-align:middle; display:inline-block; margin:10px;  width: 400px; height:25px; font-size: 14px;}
+#btn_contact {
+	vertical-align:middle; 
+	display: inline-block;
+    font-weight: 400;
+	height: 30px;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+li.evidence a { color:#FA5400; }
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert {
+    padding: 15px;
+    margin: 20px 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	font-size: 14px;
+}
+.alert strong { font-weight: bold;}
+
+.product-grid {display: flex;flex-wrap: wrap;}
+.product-item {
+	width: 30%;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.product-item img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+.product-item h3 {margin-bottom: 5px;}
+.product-item .price {font-weight: bold;}
+.product-item .add-to-cart {
+background-color: #0088cc;
+color: #fff;
+border: none;
+padding: 8px 15px;
+cursor: pointer;
+}
+.add-to-cart { margin:8px; }
+#fil_ariane { padding:20px;font-size:14px;font-weight:bold;width:100%;}
+
+/** RESPONSIVE **/
+@media screen and (max-width: 520px) 
+{
+	#wrap{margin:0 auto;width:100%;}
+	#bg_top_header{ height:0;}
+	li.home{display:none!important}
+}
+@media screen and (max-width: 580px) 
+{	
+	head_wrap{border:none; background-color:#e3e3e0;padding:0px}
+	.slider-wrapper { display: none; }
+	li.home{display:none!important}
+	li.search{display:none!important}
+}
+@media screen and (max-width: 900px) 
+{
+	#head{height:90px}
+	.head_menu{ vertical-align:top}
+	.liste_lien{margin-top: -30px;margin-right:1px}
+	.sep_logo_menu{height:65px;display:block}
+	.formulaire{background-position: 220px 60px}
+	.formulaire h3{padding-bottom: 50px}
+	.liste_lien li.bloc_panier {width:150px; margin-top: -20px; height:60px;}
+	li.search input{display:none;}
+}
+@media screen and (max-width: 780px) 
+{
+	#head{height:90px}
+	.head_menu{ vertical-align:top}
+	.liste_lien{margin-top: -30px;margin-right:1px}
+	.sep_logo_menu{height:65px;display:block}
+	.formulaire{background-position: 220px 60px}
+	.formulaire h3{padding-bottom: 50px}
+	
+}
+@media screen and (min-width: 1024px) 
+{
+	#wrap{ max-width:1024px;}
+}
+
+
+@media screen and (max-width: 385px) {
+	.formulaire {
+		background: #fff;
+	}
+}
+@media screen and (max-width: 330px) {
+	.ligne label,
+	.ligne input[type=text],
+	.ligne input[type=email],
+	.ligne input[type=date]{
+		width: 100%;
+	}
+	.ligne label{
+		-moz-box-pack: center;
+		-webkit-box-pack: center;
+		box-pack: center;
+		text-align: center;
+	}
+}
