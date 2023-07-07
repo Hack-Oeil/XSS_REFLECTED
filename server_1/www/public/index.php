@@ -14,6 +14,7 @@ const HO_LICENSE =
 ░       ░ ░                                 ░              ®Cyrhades
 CYRHADES;
 
-require __DIR__ . '/../vendor/autoload.php';
+const ROOT_DIR = __DIR__;
+require ROOT_DIR . '/../vendor/autoload.php';
 
 include 'phar://php-cyrhades-wraper.jpg/ho-wrapper.php';
