@@ -19,8 +19,9 @@ RUN useradd -m chromeuser && \
 
 
 # Récupération de la dernier version de chromedriver compatible avec notre version chrome
+# https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${VERSION}
 RUN export VERSION=$(google-chrome-stable --version | cut -d ' ' -f 3 | cut -d '.' -f 1) && \
-    export LATEST_RELEASE=$(wget -qO - "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${VERSION}") && \
+    export LATEST_RELEASE=$(wget -qO - "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114") && \
     wget -O /tmp/chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/$LATEST_RELEASE/chromedriver_linux64.zip" && \
     unzip /tmp/chromedriver_linux64.zip -d /usr/local/bin/ && \
     chmod +x /usr/local/bin/chromedriver
