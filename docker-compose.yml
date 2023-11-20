@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   bot:
+    restart: always
     build: bot/
     container_name: ho-cyrhades-bot
     command: npm start
