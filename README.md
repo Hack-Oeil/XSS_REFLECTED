@@ -12,7 +12,7 @@ et de se connecter avec pour obtenir le flag, vous n'aurez pas à chercher longt
 
 
 ## Aperçu
-![infos/capture.jpg](infos/capture.jpg)
+![presentation/assets/images/capture.jpg](presentation/assets/images/capture.jpg)
 
 
 -----------
