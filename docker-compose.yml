@@ -1,18 +1,18 @@
 version: '3.9'
 services:
-  ho-cyrhades-bot:
-    build:
-      context: ./.docker/bot/
+  botserver:
+    build: ./.docker/bot/
     restart: always
-    command: npm start
-    labels:
-      ho.ctf.cyrhades: "1"
+    container_name: bot.vivatech.fr
     healthcheck:
       test: [ "CMD", "wscat", "-c", "ws://localhost:8282" ]
       interval: 5s
       timeout: 3s
       retries: 10
-  ho-webserver:
+    command: npm start
+    labels:
+      ho.ctf.cyrhades: "1"
+  web_apache:
     build:
       context: ./.docker/server_http/
     environment:

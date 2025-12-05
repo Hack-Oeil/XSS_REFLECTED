@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Des marques chez vous</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/defaut.css" type="text/css" />
+</head>
+<body>
+<div id="wrap">
+		<header class="head">
+			<div id="bg_top_header">&nbsp;</div>
+			<div id="header">
+				<div id="head">
+					<div id="head_logo">
+						<a href="/" width="280" height="45" title="logo" class="logo">&nbsp;</a>
+					</div>
+					<span class="sep_logo_menu">&nbsp;</span>
+					<div class="head_menu">
+						<ul class="liste_lien"></ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav>
+            <ul id="menu_haut">
+                <li class="home no_padding">
+                    <a href="/">
+                        <img src="/assets/img/home.png" width="24px" haight="24px" />
+                    </a>
+                </li>
+                <li class="home sep"></li>
+                <li class="no_padding">
+                <a href="javascript:;">Homme</a>
+                    <!--<ul><li>Sous menu des hommes</li></ul>-->
+                </li>
+                <li class="sep"></li>
+                <li class="no_padding">
+                    <a href="javascript:;">Femme</a>
+                </li>
+                <li class="sep"></li>
+                <li class="no_padding">
+                    <a href="javascript:;">Enfant</a>
+                </li>
+                <li class="sep"></li>
+                <li>
+                    <a href="javascript:;">Destockage</a>
+                </li>
+				<li class="sep"></li>
+				<li class="evidence">
+                    <a href="/contact">Nous contacter</a>
+                </li>
+                <li class="sep"></li>
+                <li class="search">
+                    <form action="/" method="get">
+                        <input type="search" name="q" id="header_search" value="<?= (!empty($_GET['q'])?$_GET['q']:""); ?>" />
+                        <button id="btn_search">🔎</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+
+		<nav><div id="slider"></div></nav>
+
+		<div id="main">
