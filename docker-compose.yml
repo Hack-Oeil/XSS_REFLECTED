@@ -3,7 +3,6 @@ services:
   botserver:
     build: ./.docker/bot/
     restart: always
-    container_name: bot.vivatech.fr
     healthcheck:
       test: [ "CMD", "wscat", "-c", "ws://localhost:8282" ]
       interval: 5s
