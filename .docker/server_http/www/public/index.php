@@ -19,6 +19,10 @@ function render($name, $params = []){
 function callBot($url) {
     $client = new \WebSocket\Client("ws://botserver:8282");
     try {
+        /** adapté pour nouveau proxy **/
+        if(!empty($_SERVER["HTTP_X_PROXY_REAL_ADDRESS"])) { 
+            $url = str_replace($_SERVER["HTTP_X_PROXY_REAL_ADDRESS"], 'http://web_apache/', $url);
+        }
         $client->text(json_encode([
             "host" => 'http://web_apache',
             "actions" => [
