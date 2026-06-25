@@ -26,6 +26,7 @@ class HomeController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!empty($_POST['url'])) {
                 $url = $_POST['url'];
+
                 if (strpos($url, 'http') !== 0) {
                     $url = 'http://' . $url;
                 }

@@ -93,6 +93,18 @@ ul {
     color: var(--secondary-color);
 }
 
+.main-nav a.btn-bug {
+    color: var(--secondary-color);
+    font-weight: 700;
+    border: 2px solid var(--secondary-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+.main-nav a.btn-bug:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
