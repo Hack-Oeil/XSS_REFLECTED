@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Kiểm tra xem cửa sổ có trong iframe không
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Thử thách #19</h3>
+                            <h2 class="section-title">XSS Reflected</h2>
+                            <p>
+                                Lấy FLAG xác thực bằng cách khai thác lỗ hổng Reflected XSS.
+                                <br /><br />
+                                Trong thử thách này, mục tiêu là lấy cookie kết nối của dịch vụ kỹ thuật và đăng nhập bằng cookie đó để lấy cờ; bạn sẽ không phải tìm lâu đâu.
+                            </p>
+                            <h4>Xem trước:</h4>
+                            <img class="capture" src="./assets/images/capture.jpg" alt="xem trước">
+                            <p class="section-subtitle">
+                                Để làm được điều này, bạn cần có những kiến thức sau:
+                            </p>
+                            <ul id="prerequisites" class="col-1">
+                                <li>Phiên (Sessions)</li>
+                                <li>Chèn mã XSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Học tập</h3>
+                            <h2 class="section-title">Tài liệu và Video</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://ctfs.cyrhades.fr/OWASP-CheatSheets/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+                                    <img src="./assets/images/link.png" />
+                                    Phòng chống Cross Site Scripting OWASP
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=3U3EaxAE3ts">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 1
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=dxWZfQie3co">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 2
+                                </a>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Trợ giúp</h3>
+                            <h2 class="section-title">Mẹo và gợi ý</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Chủ đề trên Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="Trở lên trên cùng"></a>
+    </div>
+</body>
+
+</html>

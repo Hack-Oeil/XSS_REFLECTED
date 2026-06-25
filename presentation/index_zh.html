@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 检查窗口是否在iframe中
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>挑战 #19</h3>
+                            <h2 class="section-title">XSS Reflected</h2>
+                            <p>
+                                通过利用 Reflected XSS 漏洞获取验证 FLAG。
+                                <br /><br />
+                                在这个挑战中，目标是获取技术服务的连接 cookie 并使用它们登录以获取 flag；您无需寻找太久。
+                            </p>
+                            <h4>预览：</h4>
+                            <img class="capture" src="./assets/images/capture.jpg" alt="预览">
+                            <p class="section-subtitle">
+                                为此，您必须具备以下知识：
+                            </p>
+                            <ul id="prerequisites" class="col-1">
+                                <li>会话 (Sessions)</li>
+                                <li>XSS 注入</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>学习</h3>
+                            <h2 class="section-title">文档和视频</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://ctfs.cyrhades.fr/OWASP-CheatSheets/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+                                    <img src="./assets/images/link.png" />
+                                    OWASP 跨站脚本预防
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=3U3EaxAE3ts">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 1
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=dxWZfQie3co">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 2
+                                </a>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>帮助</h3>
+                            <h2 class="section-title">提示和建议</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discord 上的帖子</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="回到顶部"></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="it">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verifica se la finestra si trova in un iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Sfida #19</h3>
+                            <h2 class="section-title">XSS Reflected</h2>
+                            <p>
+                                Recupera il FLAG di validazione sfruttando una vulnerabilità XSS Reflected.
+                                <br /><br />
+                                In questa sfida l'obiettivo è recuperare i cookie di connessione del servizio tecnico e accedere con essi per ottenere il flag; non dovrai cercare a lungo.
+                            </p>
+                            <h4>Anteprima:</h4>
+                            <img class="capture" src="./assets/images/capture.jpg" alt="anteprima">
+                            <p class="section-subtitle">
+                                Per fare ciò è necessario possedere le seguenti conoscenze:
+                            </p>
+                            <ul id="prerequisites" class="col-1">
+                                <li>Le sessioni</li>
+                                <li>Iniezione XSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Apprendimento</h3>
+                            <h2 class="section-title">Documentazione e Video</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://ctfs.cyrhades.fr/OWASP-CheatSheets/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+                                    <img src="./assets/images/link.png" />
+                                    Prevenzione Cross Site Scripting OWASP
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=3U3EaxAE3ts">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 1
+                                </a>
+                                <br />
+                                <a target="_blank" href="https://www.youtube.com/watch?v=dxWZfQie3co">
+                                    <img src="./assets/images/youtube.png" />
+                                    XSS Reflected 2
+                                </a>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Aiuto</h3>
+                            <h2 class="section-title">Consigli e suggerimenti</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discussione su Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="Torna in cima"></a>
+    </div>
+</body>
+
+</html>
