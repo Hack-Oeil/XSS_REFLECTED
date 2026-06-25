@@ -25,3 +25,4 @@ Mais voici comment installer ce CTF manuellement :
 
 > cd XSS_REFLECTED && docker compose up
 
+> docker compose up -d docker-compose-default.yml

@@ -1,0 +1,24 @@
+services:
+  botserver:
+    build: ./.docker/bot/
+    restart: always
+    healthcheck:
+      test: [ "CMD", "wscat", "-c", "ws://localhost:8282" ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    command: npm start
+    labels:
+      ho.ctf.cyrhades: "1"
+  web_apache:
+    build:
+      context: ./.docker/server_http/
+    environment:
+      - HOOS_CTF_EMAIL=${HOOS_CTF_EMAIL:-}
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
+      - LANGUAGE=${LANGUAGE:-fr}
+    labels:
+      ho.ctf.cyrhades: "challenge"
+      ho.ctf.cyrhades.bot: "1"
+    ports:
+      - ${PORT}:80
